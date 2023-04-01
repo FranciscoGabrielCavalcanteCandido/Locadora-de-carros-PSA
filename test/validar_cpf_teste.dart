@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:locadora_de_carros_psa/controller/validar_cpf.dart';
+import 'package:locadora_de_carros_psa/core/validar_cpf.dart';
 
 void main() {
   test('Validar se o CPF é vazio', () {
@@ -54,12 +54,11 @@ void main() {
     expect(validarCpf.cauculaSegundoDigito(cpf), 0);
   });
 
-   test('Deve validar os digitos', () {
+  test('Deve validar os digitos', () {
     String cpf = '123.456.789-00';
 
     var validarCpf = ValidarCPF();
 
     expect(validarCpf.validarDigitos(cpf), true);
   });
-  
 }
