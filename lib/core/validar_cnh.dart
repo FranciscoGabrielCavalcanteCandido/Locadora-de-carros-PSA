@@ -3,8 +3,8 @@ class ValidarCnh {
     possuiCnh(cnh);
   }
 
-  bool possuiCnh(String cnh) {
-    if (cnh.isEmpty) throw Exception('CNH não pode ser vazia');
-    return true;
+  String possuiCnh(String cnh) {
+    if (cnh.isNotEmpty) throw Exception('CNH não pode ser vazia');
+    return cnh;
   }
 }

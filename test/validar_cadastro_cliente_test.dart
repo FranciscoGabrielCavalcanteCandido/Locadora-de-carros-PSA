@@ -10,7 +10,7 @@ void main() {
   });
 
   test('Cliente possuiu CNH', () {
-    String cnh = "";
+    String cnh = "CNH";
     var validarCliente = ValidarCliente();
     expect(() => validarCliente.possuiCnh(cnh), throwsException);
   });

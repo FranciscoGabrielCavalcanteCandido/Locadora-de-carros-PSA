@@ -12,16 +12,16 @@ void main() {
   });
 
   test("Placa já cadastrada", () {
-    String placa = "";
+    String placa = "AAA-123";
 
-    var placaCarro;
+    var placaCarro = ValidarCarro();
     expect(() => placaCarro.possuiuPlaca(placa), throwsException);
   });
 
   test('Documentação em dia', () {
     bool documentacao = true;
 
-    var carroDocumento;
+    var carroDocumento = ValidarCarro();
     expect(() => carroDocumento.documentacaoOk(documentacao), throwsException);
   });
 }

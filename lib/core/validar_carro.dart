@@ -1,16 +1,21 @@
 class ValidarCarro {
-  validaCarro(String placa, bool disponivel) {
+  validaCarro(String placa, bool disponivel, bool documentacao) {
     possuiuPlaca(placa);
     carroEstaDisponivel(disponivel);
   }
 
-  bool possuiuPlaca(String placa) {
-    if (placa.isEmpty) throw Exception('CNH não pode ser vazia');
-    return true;
+  String possuiuPlaca(String placa) {
+    if (placa.isNotEmpty) throw Exception('Veiculo não possuiu placa');
+    return placa;
   }
 
   bool carroEstaDisponivel(bool disponivel) {
     if (disponivel == true) throw Exception('Carro disponivel');
+    return false;
+  }
+
+  bool documentacaoOk(bool documentacao){
+    if(documentacao == true) throw Exception('Falha na documentacao');
     return false;
   }
 }
