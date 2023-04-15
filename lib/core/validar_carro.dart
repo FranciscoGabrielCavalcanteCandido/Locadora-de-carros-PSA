@@ -1,5 +1,5 @@
 class ValidarCarro {
-  validaCarro(String placa, bool disponivel, bool documentacao) {
+  validaCarro(String placa, bool disponivel, bool documentacao, bool revisao) {
     possuiuPlaca(placa);
     carroEstaDisponivel(disponivel);
   }
@@ -18,4 +18,12 @@ class ValidarCarro {
     if(documentacao == true) throw Exception('Falha na documentacao');
     return false;
   }
+
+ bool carroEstaRevisado(bool revisao) {
+  if(revisao == true) throw Exception('Carro não está revisado');
+  return false;
+ }
+
+
+  
 }

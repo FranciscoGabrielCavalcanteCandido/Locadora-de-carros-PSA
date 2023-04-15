@@ -1,5 +1,4 @@
 import 'package:locadora_de_carros_psa/core/validar_cpf.dart';
-import 'package:locadora_de_carros_psa/model/cliente.dart';
 
 class ValidarCPF {
   void validaCpf(String cpf) {

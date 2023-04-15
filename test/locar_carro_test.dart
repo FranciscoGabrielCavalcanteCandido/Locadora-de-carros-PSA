@@ -11,7 +11,7 @@ void main() {
         () => carroDisponivel.carroEstaDisponivel(disponivel), throwsException);
   });
 
-  test("Placa já cadastrada", () {
+  test("Possui placa", () {
     String placa = "AAA-123";
 
     var placaCarro = ValidarCarro();
@@ -23,5 +23,12 @@ void main() {
 
     var carroDocumento = ValidarCarro();
     expect(() => carroDocumento.documentacaoOk(documentacao), throwsException);
+  });
+
+  test('O carro está revisado', () {
+    bool revisao = true;
+
+    var carroRevisado = ValidarCarro();
+    expect(() => carroRevisado.carroEstaRevisado(revisao), throwsException); 
   });
 }
